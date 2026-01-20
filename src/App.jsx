@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { GridScan } from '../src/components/GridScan.jsx';
 import DecryptedText from "../src/components/Decryptedtext.jsx";
 import { Globe } from 'lucide-react';
+import hblogo from './public/hblogo.png';
+import hbAlt from './public/hb4_alt.svg';
 
 const App = () => {
   const [activeTab, setActiveTab] = useState(null);
@@ -21,12 +23,12 @@ const App = () => {
 
       <div className="relative z-10 flex flex-col justify-center items-center h-screen text-center px-4 pointer-events-none">
         <img 
-          src="src/hblogo.png" 
+          src={hblogo}
           alt="Logo"
           className="w-64 md:w-96 h-auto mb-8 drop-shadow-2xl pointer-events-auto"
         />
 
-        <button className="px-16 py-4 mb-12 bg-purple-900/20 backdrop-blur-md text-white border-2 border-purple-500 font-bold rounded-full transition-transform hover:scale-105 pointer-events-auto">
+        <button onClick={()=>{window.open('https://milaap.org/fundraisers/support-hackbyte-4-0','_blank');}} className="px-16 py-4 mb-12 bg-purple-900/20 backdrop-blur-md text-white border-2 border-purple-500 font-bold rounded-full transition-transform hover:scale-105 pointer-events-auto">
           <div className="text-xl md:text-2xl tracking-[0.2em] uppercase">
             <DecryptedText animateOn='view' speed={100} maxIterations={40} text="Donate" />
           </div>
@@ -112,10 +114,10 @@ const App = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center w-full">
                     
                     <div className="flex flex-col items-center md:items-end text-center md:text-right order-1">
-                      <img src="src/hb4_alt.svg" alt="hackbyte logo" className="w-40 md:w-64 mb-6 md:mb-8 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] mx-auto md:mx-0" />
+                      <img src={hbAlt} alt="hackbyte logo" className="w-40 md:w-64 mb-6 md:mb-8 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] mx-auto md:mx-0" />
                       
                       <p className="text-gray-300 text-sm md:text-base leading-relaxed max-w-md mb-8">
-                        Join IIITDMJ's Programming Club for Hackbyte 4.0 in April 2025! Following the success of Hackbyte 2.0 with 2400+ participants, the sequel expands with new domains. Don't miss this groundbreaking programming fest!
+                        Join IIITDMJ's Programming Club for Hackbyte 4.0 in April 2026! Following the success of Hackbyte 3.0 with 2400+ participants, the sequel expands with new domains. Don't miss this groundbreaking programming fest!
                       </p>
                       
                       <a href="https://www.hackbyte.in" className="flex flex-col items-center md:items-end gap-2 text-teal-400 group cursor-pointer">
